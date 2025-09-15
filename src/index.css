@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #57f9f3;
+    --color-secondary: #1a1a2e;
+    --color-gra: #14b8a6;
+    --color-txt1: #8e8e8b;
+    --color-txt2: #3a3a3a;
+    --color-bc1: black;
+    --color-bc2: white;
+}
+
+.light {
+    --color-primary: #0099ff;
+    --color-secondary: white;
+    --color-gra: #0099ff86;
+    --color-txt1: #8e8e8b;
+    --color-txt2: #9c9c9c;
+    --color-bc1: white;
+    --color-bc2: black;
+}
+
+.box {
+    animation: move 1s infinite alternate ease-in-out;
+}
+
+@keyframes move {
+    from {
+        transform: translateY(0px);
+    }
+
+    to {
+        transform: translateY(10px);
+    }
+}
