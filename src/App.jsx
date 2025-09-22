@@ -161,10 +161,10 @@ function App() {
             </nav>
             <div className='xl:hidden block'>
               <div>
-                <i onClick={moveLeft} className="relative fa-solid fa-bars scale-150"></i>
+                <i onClick={moveLeft} className="relative fa-solid fa-bars scale-150 cursor-pointer"></i>
               </div>
               <div ref={move} className='absolute flex flex-col items-center justify-center h-screen w-screen top-0 bg-bc1 transition-all duration-1000 right-[-100%] z-100 opacity-0'>
-                <ul className='relative flex flex-col h-full w-full justify-evenly items-center font-bold text-bc2'>
+                <ul className='relative flex flex-col h-full w-full justify-evenly items-center font-bold text-bc2 cursor-pointer'>
                   <i onClick={moveRight} className='absolute scale-150 fa-solid fa-xmark top-10 right-10'></i>
                   <li><Link onClick={moveRight} to="home" spy={true} offset={-150} >Home</Link></li>
                   <li><Link onClick={moveRight} to="about" spy={true} offset={-100} >About</Link></li>
@@ -172,7 +172,7 @@ function App() {
                   <li><Link onClick={moveRight} to="projects" spy={true} offset={-35} >Projects</Link></li>
                   <li><Link onClick={moveRight} to="services" spy={true} offset={-5} >Services</Link></li>
                   <li><Link onClick={moveRight} to="contact" spy={true} offset={-50} >Contact</Link></li>
-                  <label className='relative inline-block w-16 h-8 cursor-pointer mb-2'>
+                  <label onClick={moveRight} className='relative inline-block w-16 h-8 cursor-pointer mb-2'>
                     <input onClick={() => setIsLight(!isLight)} type="checkbox" className='opacity-0 w-0 h-0 peer' />
                     <span className='absolute flex justify-center items-center left-[-3px] top-0.5 h-7 w-7 rounded-full transition border-2 border-bc2 bg-bc1 duration-500 translate-x-9.5 peer-checked:translate-x-1.5 z-30'>
                     </span>
@@ -377,7 +377,7 @@ function App() {
                       </div>
                     </div>
                   </div>
-                </div>
+                 </div>
               </div>
             </section>
 
@@ -447,7 +447,7 @@ function App() {
                     <li className='w-75 flex flex-col items-center justify-center gap-3'><i className="fa-solid fa-phone text-primary text-4xl"></i>Call Me On<a className='text-txt1 hover:underline' href="tel:+917660966537">7660966537</a></li>
                     <li className='w-75 flex flex-col items-center justify-center gap-3'><i className="fa-solid fa-location-dot text-primary text-4xl"></i>Location<span className='text-txt1'>Telangana, India</span></li>
                     <li className='w-75 flex flex-col items-center justify-center gap-3'><i className="fa-solid fa-envelope text-primary text-4xl"></i>Email<a className='text-txt1 hover:underline' href="mailto:gauravvaishnav022005@gmail.com">gauravvaishnav022005@gmail.com</a></li>
-                    <li className='w-75 flex flex-col items-center justify-center gap-3'><i className="fa-solid fa-earth-americas text-primary text-4xl"></i>Website<span className='text-txt1'>xyz.com</span></li>
+                    <li className='w-75 flex flex-col items-center justify-center gap-3'><i className="fa-solid fa-earth-americas text-primary text-4xl"></i>Website<span className='text-txt1'><a className='hover:underline' href="https://codesbygaurav.vercel.app/">codesbygaurav.vercel.app</a></span></li>
                   </ul>
                 </div>
                 <div className='flex flex-col justify-center items-center w-full gap-20'>
